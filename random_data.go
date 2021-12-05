@@ -434,7 +434,7 @@ func PhoneNumber() string {
 
 	for {
 		// max 15 chars
-		remaining := 15 - (len(str) - strings.Count(str, " "))
+		remaining := 15 - (len(str) - strings.Count(str, ""))
 		if remaining < 2 {
 			return str
 		}
