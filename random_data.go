@@ -436,7 +436,7 @@ func PhoneNumber() string {
 		// max 15 chars
 		remaining := 15 - (len(str) - strings.Count(str, " "))
 		if remaining < 2 {
-			return "+" + str
+			return str
 		}
 		str += " " + Digits(privateRand.Intn(remaining-1)+1)
 	}
