@@ -428,7 +428,7 @@ func UserAgentString() string {
 }
 
 func PhoneNumber() string {
-	str := randomFrom(jsonData.CountryCallingCodes) + " "
+	str := randomFrom(jsonData.CountryCallingCodes)
 
 	str += Digits(privateRand.Intn(3) + 1)
 
@@ -438,6 +438,6 @@ func PhoneNumber() string {
 		if remaining < 2 {
 			return str
 		}
-		str += " " + Digits(privateRand.Intn(remaining-1)+1)
+		str += Digits(privateRand.Intn(remaining-1)+1)
 	}
 }
